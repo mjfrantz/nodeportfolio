@@ -1,7 +1,11 @@
 const express = require('express');
 const morgan = require('morgan');
+const portfolioRouter = require('./routes/portfolioRoutes');
+
 
 const app = express();
+
+app.use(express.json());
 
 //Middleware 
 if (process.env.NODE_ENV === 'development') {
@@ -9,7 +13,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use((req, res, next) => {
-    console.log('Middleware');
+    console.log('Hello from Middleware');
     next();
 });
 
@@ -17,5 +21,8 @@ app.use((req, res, next) => {
     req.requestTime = new Date().toISOString();
     next();
 });
+
+//Mounting the Router 
+app.use('/api/v1/portfolios', portfolioRouter);
 
 module.exports = app;
