@@ -10,13 +10,20 @@ const portfolioSchema = new mongoose.Schema({
         type: String,
         required: [true, 'A portfolio must have a description.']
     },
-    websiteUrl: {
+    summary: {
         type: String,
-        required: [true, 'A portfolio must have a websiteUrl.']
+        required: [true, 'A portfolio must have a summary.']
     },
-    landingPageImage: {
+    links: {
+        type: [String],
+        required: [true, 'A portfolio must have github link']
+    },
+    image: {
         type: String,
-        // required: [true, 'A webpage must have a Landing Page Image.']
+        required: [true, 'A webpage must have a Landing Page Image.']
+    },
+    createdAt: {
+        type: Date
     }
 });
 
