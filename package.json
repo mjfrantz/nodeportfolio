@@ -10,11 +10,11 @@
   "author": "Michael J. Frantz",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "cloudinary": "^1.15.0",
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-fileupload": "^1.1.6-alpha.5",
     "mongoose": "^5.7.0",
     "morgan": "^1.9.1",
